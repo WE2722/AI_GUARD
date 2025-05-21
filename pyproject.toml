@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"] # Or another build backend like flit or poetry
+build-backend = "setuptools.build_meta"
+#backend-path = ["."] # Tells it to look for setup.py if needed, or use setuptools features
+
+[project]
+name = "ai_guard"
+version = "0.1.0" # Keep this in sync with your docs/conf.py version
+description = "A short description of AI_GUARD."
+readme = "README.md" # Optional, if you have a README.md
+requires-python = ">=3.8"
+# license = {text = "MIT License"} 
+# authors = [
+#   { name="Wiam", email="your_email@example.com" },
+# ]
+# dependencies = [
+#   # "numpy", # List your project's runtime dependencies here
+# ]
+
+[tool.setuptools]
+py-modules = ["ai_guard"] 
+
+[project.optional-dependencies]
+dev = [
+    "pytest",         # For testing
+    "sphinx",         # For documentation (already installed in venv, but good to list)
+    "sphinx-rtd-theme",
+    "myst-parser",
+    "sphinx-autodoc-typehints",
+    # "black",        # For code formatting
+    # "flake8",       # For linting
+]
