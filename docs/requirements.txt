@@ -1,0 +1,14 @@
+sphinx
+sphinx-rtd-theme
+myst-parser
+sphinx-autodoc-typehints
+# Add any other *essential* extensions from your conf.py that need to be pip installed
+# For example, if you have:
+# sphinx-copybutton
+# sphinx-autoapi
+# recommonmark # (though myst-parser often replaces this)
+# sphinxcontrib-mermaid
+# sphinx-math-dollar
+# sphinxcontrib-bibtex
+# sphinx-tabs
+# rinohtype # (for PDF generation, if you need it)
