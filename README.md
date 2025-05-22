@@ -187,7 +187,7 @@ For the full production system at ENSAM, we plan to implement:
 
 ## 🔬 Key Notebooks
 
-- `NNNNNNNNN1111.ipynb`: Face registration workflow with webcam integration
+- `AIGUARD_capture.ipynb`: Face registration workflow with webcam integration
 - Model training notebooks with various architectures
 - Evaluation notebooks comparing model performance
 - Data augmentation scripts to enhance the LFW dataset
