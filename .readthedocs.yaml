@@ -1,23 +1,21 @@
-# Read the Docs configuration file
-# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
-
-# Required
 version: 2
 
-# Set the OS, Python version, and other tools you might need
 build:
-  os: ubuntu-24.04
+  os: ubuntu-22.04 # Or your preferred OS
   tools:
-    python: "3.13"
+    python: "3.13" # Match your local Python or choose a recent stable one like "3.9", "3.10", "3.11"
+                   # Note: Python 3.13 is very new; sometimes sticking to slightly older, more widely supported versions on CIs is safer.
+                   # Let's try "3.11" for now if 3.13 causes other subtle issues.
 
-# Build documentation in the "docs/" directory with Sphinx
+# Sphinx configuration file
 sphinx:
-   configuration: docs/source/conf.py
+  configuration: docs/source/conf.py
 
-# Optionally, but recommended,
-# declare the Python requirements required to build your documentation
-# See https://docs.readthedocs.io/en/stable/guides/reproducible-builds.html
-# python:
-#    install:
-#    - requirements: docs/requirements.txt
-        
+# Python requirements
+python:
+  install:
+    - requirements: docs/requirements.txt # This installs myst-parser, sphinx-rtd-theme, etc.
+    - method: pip
+      path: .                             # This installs your AI_GUARD project itself
+      # extra_requirements: # Optional: if you defined extras in pyproject.toml like [dev]
+      #  - dev
